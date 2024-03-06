@@ -1,0 +1,18 @@
+{
+    "enable": true,
+    "tag": "Unity",
+    "loggerConfigs": [
+        {
+            "loggerType": 1,
+            "prefixType": 2,
+            "priority": 4,
+            "prefix2PriorityMap": [
+                {
+                    "prefix": "LocalSave",
+                    "priority": 0
+                }
+            ]
+        }
+    ],
+    "name": "LocalConfig",
+    "hideFlags": 0
