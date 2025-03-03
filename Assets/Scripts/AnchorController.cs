@@ -11,29 +11,12 @@ public class AnchorController : MonoBehaviour
 
     [SerializeField] private Text anchorPose;
 
-    [SerializeField] private Image saveIcon;
-
-    [SerializeField] private Color grayColor;
-
-    [SerializeField] private Color greenColor;
-
     [SerializeField] private GameObject anchorGameObject;
 
     private SpatialAnchorItem m_spatialAnchor;
 
     private Vector3 m_PrePosition;
     private Quaternion m_PreRotation;
-
-    public bool IsSavedLocally
-    {
-        set
-        {
-            if (saveIcon != null)
-            {
-                saveIcon.color = value ? greenColor : grayColor;
-            }
-        }
-    }
 
     private void Awake()
     {
@@ -60,7 +43,7 @@ public class AnchorController : MonoBehaviour
 
     private void OnSaveCompleteCallback(YVRSpatialAnchorSaveCompleteInfo saveResult,bool success)
     {
-        IsSavedLocally = success;
+        Debug.Log($"Save spatial anchor result:{success}");
     }
 
     public void OnHideButtonPressed()

@@ -55,7 +55,7 @@ MonoBehaviour:
     attrValue: yvr.sdk.version
     attrs:
     - value
-    - Unity_android-device.business_0.0.1|Unity_core_1.14.7|Unity_interaction_0.2.1|Unity_platform_0.5.2|Unity_utilities_0.14.14
+    - Unity_core_1.14.7|Unity_utilities_0.14.14
     required: 1
     modifyIfFound: 1
   - nodePath: /manifest/application
