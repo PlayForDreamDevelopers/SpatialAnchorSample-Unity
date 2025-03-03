@@ -1,0 +1,18 @@
+{
+  "name": "com.yvr.platform",
+  "version": "0.5.3",
+  "displayName": "YVR Platform",
+  "description": "This is the YVR VR Platform.",
+  "unity": "2019.1",
+  "dependencies": {
+    "com.yvr.utilities": "0.1.18",
+    "com.unity.nuget.newtonsoft-json": "2.0.0"
+  },
+  "samples":[
+		{
+       "displayName": "Platform Samples",
+       "description": "The Platform Sample demonstrates the basic usage of the YVR Platform SDK.",
+       "path": "Samples~/PlatformSample"
+		}
+	]
+}

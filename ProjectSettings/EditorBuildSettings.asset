@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SpatialAnchorSimple.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/ShareSpatialAnchors.unity
+    guid: 8a973b7f03e5cdb4889f8ab6b34f531a
   m_configObjects:
     YVR.Core.XR.YVRXRSettings: {fileID: 11400000, guid: 2f11b78aa8ea8c94d8b44e5a8af17d35, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d1683d528be53e64882d2aaa7bf140a4, type: 2}

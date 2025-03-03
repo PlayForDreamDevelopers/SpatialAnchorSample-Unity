@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WebSocketSharp;
 
 public class SpatialAnchorItem : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class SpatialAnchorItem : MonoBehaviour
     {
         get
         {
-            if (string.IsNullOrEmpty(m_uuidString) && uuidChar !=null)
+            if (m_uuidString.IsNullOrEmpty() && uuidChar !=null)
             {
                 m_uuidString = new string(uuidChar);
             }
