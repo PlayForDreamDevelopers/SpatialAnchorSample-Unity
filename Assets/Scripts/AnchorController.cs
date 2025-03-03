@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Photon.Pun.Demo.PunBasics;
 using UnityEngine;
 using UnityEngine.UI;
 using YVR.Core;
@@ -12,17 +8,8 @@ public class AnchorController : MonoBehaviour
 
     [SerializeField] private Text anchorPose;
 
-    [SerializeField] private Image saveIcon;
 
     [SerializeField] private GameObject shareButton;
-
-    [SerializeField] private Image shareIcon;
-
-    [SerializeField] private Image alignIcon;
-
-    [SerializeField] private Color grayColor;
-
-    [SerializeField] private Color greenColor;
 
     [SerializeField] private GameObject anchorGameObject;
 
@@ -30,39 +17,6 @@ public class AnchorController : MonoBehaviour
 
     private Vector3 m_PrePosition;
     private Quaternion m_PreRotation;
-
-    public bool IsSavedLocally
-    {
-        set
-        {
-            if (saveIcon != null)
-            {
-                saveIcon.color = value ? greenColor : grayColor;
-            }
-        }
-    }
-
-    public bool IsSelectedForShare
-    {
-        set
-        {
-            if (shareIcon != null)
-            {
-                shareIcon.color = value ? greenColor : grayColor;
-            }
-        }
-    }
-
-    public bool IsSelectedForAlign
-    {
-        set
-        {
-            if (alignIcon != null)
-            {
-                alignIcon.color = value ? greenColor : grayColor;
-            }
-        }
-    }
 
     private void Awake()
     {
@@ -90,7 +44,6 @@ public class AnchorController : MonoBehaviour
 
     private void OnSaveCompleteCallback(YVRSpatialAnchorSaveCompleteInfo saveResult,bool success)
     {
-        IsSavedLocally = success;
         LogController.Instance.Log($"Save anchor uuid:{m_spatialAnchor.uuidString} {success}");
     }
 
@@ -194,11 +147,9 @@ public class AnchorController : MonoBehaviour
         LogController.Instance.Log($"Share anchor uuid:{m_spatialAnchor.uuidString} result:{result}");
         if (!result)
         {
-            this.shareIcon.color = Color.red;
             return;
         }
 
-        IsSelectedForShare = true;
         SpatialAnchorManager.Instance.AddShareAnchor(m_spatialAnchor.spaceHandle);
         SpatialAnchorManager.Instance.PublishAnchorUuids(m_spatialAnchor.uuidString);
     }
