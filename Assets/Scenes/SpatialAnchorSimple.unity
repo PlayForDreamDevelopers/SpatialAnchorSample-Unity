@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,6 +182,14 @@ PrefabInstance:
       propertyPath: m_RequestedTrackingOriginMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8073169435168779140, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf96c65fb20224a4aa6e8a31097c8fb2, type: 2}
+    - target: {fileID: 8340661700907349775, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf96c65fb20224a4aa6e8a31097c8fb2, type: 2}
     - target: {fileID: 9014170783705847993, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_Model
       value: 
@@ -288,12 +295,18 @@ MonoBehaviour:
     _fixedFoveatedRenderingLevel: 0
     _fixedFoveatedRenderingDynamic: 0
     _sharpenType: 0
+    _enableDynamicResolution: 0
+    _minDynamicResolutionScale: 1
+    _maxDynamicResolutionScale: 1
+    _powerSetting: 1
     useRecommendedMSAALevel: 1
   trackingManager:
     _trackingSpace: 0
   handTrackingSupport: 0
   spatialAnchorSupport: 1
   sceneSupport: 0
+  eyeTrackingSupport: 0
+  largeSpaceSupport: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

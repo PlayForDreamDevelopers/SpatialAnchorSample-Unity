@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PackageVersion
   m_EditorClassIdentifier: 
   packages:
-  - Name: com.yvr.utilities
-    AssemblyName: YVR.Utilities.Runtime
-    Version: 0.14.14
   - Name: com.yvr.core
     AssemblyName: YVR.Core.Runtime
-    Version: 1.14.7
+    Version: 1.23.9
+  - Name: com.yvr.utilities
+    AssemblyName: YVR.Utilities.Runtime
+    Version: 0.15.10

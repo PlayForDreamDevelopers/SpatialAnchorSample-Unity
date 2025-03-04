@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SpatialAnchorSimple.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
-    YVR.Core.XR.YVRXRSettings: {fileID: 11400000, guid: 2f11b78aa8ea8c94d8b44e5a8af17d35, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d1683d528be53e64882d2aaa7bf140a4, type: 2}
+    YVR.Core.XR.YVRXRSettings: {fileID: 11400000, guid: c1f36abf39e01ac4d9753ef2aece23c6, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d138ca5be29c5a84bb287ded51e122c6, type: 2}
