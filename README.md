@@ -30,7 +30,7 @@ Replace the following placeholders with the actual values:
         <br />
         <a href="#samples">View Samples</a>
         &middot;
-        <a href="https://github.com/PlayForDreamDevelopers/SpatialAnchorSample-Unity/issues/new?template=bug_report.ym">Report Bug</a>
+        <a href="https://github.com/PlayForDreamDevelopers/SpatialAnchorSample-Unity/issues/new?template=bug_report.yml">Report Bug</a>
         &middot;
         <a href="https://github.com/PlayForDreamDevelopers/SpatialAnchorSample-Unity/issues/new?template=feature_request.yml">Request Feature</a>
         &middot;
