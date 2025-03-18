@@ -25,7 +25,7 @@ Replace the following placeholders with the actual values:
     <p align="center">
         Learn how to create/load scene anchors
         <br />
-        <a href="{{DocumentationURL}}"><strong>View Documentation »</strong></a>
+        <a href="https://github.com/PlayForDreamDevelopers/SpatialAnchorSample-Unity"><strong>View Documentation »</strong></a>
         <br />
         <br />
         <a href="#samples">View Samples</a>
