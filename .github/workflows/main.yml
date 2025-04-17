@@ -1,0 +1,63 @@
+name: Unity Build APK
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build my project
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: Android
+
+      # Rename
+      - name: Rename FIle
+        run: |
+          COMMIT_ID=$(git rev-parse --short HEAD)
+          echo "COMMIT_ID=${COMMIT_ID}" >> $GITHUB_ENV
+          mkdir output
+          cp build/Android/Android.apk output/output_${COMMIT_ID}.apk
+
+      # Output
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Build
+          path: output
+
+      # Release
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          files: output/output_${{env.COMMIT_ID}}.apk
