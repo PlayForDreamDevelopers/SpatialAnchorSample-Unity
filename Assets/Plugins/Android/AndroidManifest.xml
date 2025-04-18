@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <application>
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:theme="@style/UnityThemeSelector">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        <category android:name="org.khronos.openxr.intent.category.IMMERSIVE_HMD" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    </activity>
+    <meta-data android:name="com.yvr.application.mode" android:value="vr_only" />
+    <meta-data android:name="yvr.sdk.version" android:value="Unity_core_1.23.9|Unity_utilities_0.15.10" />
+    <meta-data android:name="com.yvr.ossplash" android:value="false" />
+  </application>
+  <uses-permission android:name="org.khronos.openxr.permission.OPENXR_SYSTEM" />
+  <uses-permission android:name="org.khronos.openxr.permission.OPENXR" />
+  <queries>
+    <provider android:authorities="org.khronos.openxr.runtime_broker;org.khronos.openxr.system_runtime_broker" />
+    <intent>
+      <action android:name="org.khronos.openxr.OpenXRRuntimeService" />
+    </intent>
+    <intent>
+      <action android:name="org.khronos.openxr.OpenXRApiLayerService" />
+    </intent>
+  </queries>
+  <uses-permission android:name="com.yvr.permission.USE_ANCHOR_API" />
+  <uses-feature android:name="android.hardware.vr.headtracking" android:version="1" android:required="true" />
+</manifest>
