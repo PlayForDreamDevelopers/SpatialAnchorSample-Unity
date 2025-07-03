@@ -301,12 +301,7 @@ MonoBehaviour:
     _powerSetting: 1
     useRecommendedMSAALevel: 1
   trackingManager:
-    _trackingSpace: 0
-  handTrackingSupport: 0
-  spatialAnchorSupport: 1
-  sceneSupport: 0
-  eyeTrackingSupport: 0
-  largeSpaceSupport: 0
+    _trackingSpace: 1000426000
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
