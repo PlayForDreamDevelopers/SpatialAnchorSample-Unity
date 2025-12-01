@@ -29,7 +29,37 @@ MonoBehaviour:
     attrValue: yvr.sdk.version
     attrs:
     - value
-    - Unity_core_1.23.9|Unity_utilities_0.15.10
+    - Unity_core_1.28.11|Unity_utilities_0.15.14
+    required: 1
+  - nodePath: /manifest
+    tag: uses-feature
+    attrName: name
+    attrValue: android.hardware.vr.headtracking
+    attrs:
+    - version
+    - 1
+    - required
+    - true
+    required: 1
+  - nodePath: /manifest
+    tag: uses-feature
+    attrName: name
+    attrValue: yvr.software.quadviews
+    attrs:
+    - required
+    - false
+    required: 0
+  - nodePath: /manifest
+    tag: uses-permission
+    attrName: name
+    attrValue: com.yvr.permission.USE_SCENE
+    attrs: []
+    required: 0
+  - nodePath: /manifest/application/activity/intent-filter
+    tag: category
+    attrName: name
+    attrValue: org.khronos.openxr.intent.category.IMMERSIVE_HMD
+    attrs: []
     required: 1
   - nodePath: /manifest
     tag: uses-permission
@@ -61,52 +91,6 @@ MonoBehaviour:
     attrValue: org.khronos.openxr.OpenXRApiLayerService
     attrs: []
     required: 1
-  - nodePath: /manifest/application
-    tag: meta-data
-    attrName: name
-    attrValue: com.yvr.ossplash
-    attrs:
-    - value
-    - false
-    required: 1
-  - nodePath: /manifest
-    tag: uses-feature
-    attrName: name
-    attrValue: yvr.software.quadviews
-    attrs:
-    - required
-    - false
-    required: 0
-  - nodePath: /manifest/application/activity/intent-filter
-    tag: category
-    attrName: name
-    attrValue: org.khronos.openxr.intent.category.IMMERSIVE_HMD
-    attrs: []
-    required: 1
-  - nodePath: /manifest
-    tag: uses-feature
-    attrName: name
-    attrValue: yvr.software.largespace
-    attrs:
-    - required
-    - false
-    required: 0
-  - nodePath: /manifest
-    tag: uses-permission
-    attrName: name
-    attrValue: com.yvr.permission.USE_ANCHOR_API
-    attrs: []
-    required: 1
-  - nodePath: /manifest
-    tag: uses-feature
-    attrName: name
-    attrValue: android.hardware.vr.headtracking
-    attrs:
-    - version
-    - 1
-    - required
-    - true
-    required: 1
   - nodePath: /manifest
     tag: uses-permission
     attrName: name
@@ -117,6 +101,14 @@ MonoBehaviour:
     tag: uses-feature
     attrName: name
     attrValue: yvr.software.eye_tracking
+    attrs:
+    - required
+    - false
+    required: 0
+  - nodePath: /manifest
+    tag: uses-feature
+    attrName: name
+    attrValue: yvr.software.largespace
     attrs:
     - required
     - false
@@ -135,10 +127,18 @@ MonoBehaviour:
     - required
     - false
     required: 0
+  - nodePath: /manifest/application
+    tag: meta-data
+    attrName: name
+    attrValue: com.yvr.ossplash
+    attrs:
+    - value
+    - false
+    required: 1
   - nodePath: /manifest
     tag: uses-permission
     attrName: name
-    attrValue: com.yvr.permission.USE_SCENE
+    attrValue: com.yvr.permission.USE_ANCHOR_API
     attrs: []
     required: 0
   packingAssetInfoList: []

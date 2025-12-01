@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   use16BitDepthBuffer: 0
   useMonoscopic: 0
-  useVRWidget: 0
   optimizeBufferDiscards: 0
   useAppSW: 0
   stereoRenderingMode: 2
@@ -28,3 +27,9 @@ MonoBehaviour:
   outerExtraPassRenderScale: 1
   innerExtraPassRenderScale: 1
   isP3: 0
+  require6Dof: 1
+  handTrackingSupport: 0
+  eyeTrackingSupport: 0
+  requireSpatialAnchor: 1
+  requireSceneAnchor: 0
+  LBESupport: 0

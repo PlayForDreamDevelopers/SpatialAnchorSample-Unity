@@ -2,11 +2,14 @@
   "dependencies": {
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.render-pipelines.universal": "14.0.11",
     "com.unity.textmeshpro": "3.0.7",
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
     "com.unity.xr.interaction.toolkit": "2.6.3",
+    "com.yvr.core": "https://github.com/PlayForDreamDevelopers/com.yvr.core-mirror.git?path=/com.yvr.core#version_1.28.11",
+    "com.yvr.utilities": "https://github.com/PlayForDreamDevelopers/com.yvr.utilities-mirror.git?path=/com.yvr.utilities#version_0.15.14",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -37,8 +40,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.yvr.core": "https://github.com/PlayForDreamDevelopers/com.yvr.core-mirror.git?path=/com.yvr.core#version_1.28.11",
-    "com.yvr.utilities": "https://github.com/PlayForDreamDevelopers/com.yvr.utilities-mirror.git?path=/com.yvr.utilities#version_0.15.14"
+    "com.unity.modules.xr": "1.0.0"
   }
 }
